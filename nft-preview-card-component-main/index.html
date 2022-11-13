@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      color: white;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    :root {
+      --soft-blue: hsl(215, 51%, 70%);
+      --cyan: hsl(178, 100%, 50%);
+      --main: hsl(217, 54%, 11%);
+      --card: hsl(218, 52%, 12%);
+      --very-dark-blue: hsl(215, 36%, 21%);
+      --white: hsl(0, 0%, 100%);
+    }
+
+    body {
+      background-color: var(--main);
+      font-family: 'Outfit';
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back {
+      display: flex;
+      justify-content: center;
+      background-color: var(--card);
+      width: 400px;
+      height: 590px;
+      margin: 50px 0;
+      border-radius: 30px;
+    }
+
+    .line {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      background-color: var(--main);
+      width: 350px;
+      height: 530px;
+      border-radius: inherit;
+    }
+
+    main {
+      position: absolute;
+      top: -25px;
+      background-color: var(--very-dark-blue);
+      width: 270px;
+      padding: 20px 20px 15px 20px;
+      border-radius: 15px;
+    }
+
+    .icon {
+      position: relative;
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .equilibrium {
+      width: inherit;
+    }
+
+    .icon-view {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      background-color: var(--cyan);
+      opacity: 0;
+    }
+
+    h2 {
+      color: var(--white);
+      font-size: 1.19em;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--soft-blue);
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    div>div {
+      column-gap: 5px;
+    }
+
+    .profile-container {
+      justify-content: flex-start;
+      column-gap: 10px;
+      height: 50px;
+      border-top: 1px solid var(--soft-blue);
+    }
+
+    .profile {
+      width: 30px;
+      border-radius: 50%;
+      padding: 1px;
+    }
+
+    .profile-container>div {
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    .profile-container p {
+      font-size: 13px;
+    }
+
+    span {
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    h2:hover,
+    span:hover {
+      color: var(--cyan);
+    }
+
+    .icon:hover .icon-view {
+      opacity: .6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="back">
+    <div class="line">
+      <main>
+        <div class="icon">
+          <img class="equilibrium" src="images/image-equilibrium.jpg" alt="equilibrium">
+          <div class="icon-view">
+            <img src="images/icon-view.svg" alt="">
+          </div>
+        </div>
+        <h2>Equilibrium #3429</h2>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+        <div>
+          <div>
+            <img src="images/icon-ethereum.svg" alt="">
+            <p style="color:var(--cyan)">0.041 ETH</p>
+          </div>
+          <div>
+            <img src="images/icon-clock.svg" alt="">
+            <p>3 days left</p>
+          </div>
+        </div>
+        <div class="profile-container">
+          <div>
+            <img class="profile" src="images/image-avatar.png" alt="avatar">
+          </div>
+          <p>Creation of <span>Jules Wyvern</span></p>
+        </div>
+      </main>
+    </div>
+  </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/Yusif70">Yusif70</a>.
+  </footer>
+</body>
+
+</html>
